@@ -5,24 +5,24 @@ var compot = require('compot'),
 module.exports = function(option) {
 
     function transform(file, encoding, callback) {
+        var self = this;
+
         if (file.isNull()) {
-            return callback()
+            return callback(null, file)
         }
 
         if (file.isStream()){
-            this.emit('error', new gutil.PluginError('gulp-compot', 'Streaming not supported'));
-            return callback()
+            return callback(new gutil.PluginError('gulp-compot', 'Streaming not supported'), null)
         }
 
-        var input = file.contents.toString(encoding);
-
-        compot.render(input, function(err, output){
+        compot.render(file.contents.toString(encoding), {
+            root: file.base
+        }, function(err, res){
             if (err) {
-                this.emit('error', new gutil.PluginError('gulp-compot', err));
-                return callback()
+                return callback(err, null)
             }
 
-            file.contents = new Buffer(output, encoding);
+            file.contents = new Buffer(res, encoding);
             return callback(null, file)
         });
     }
