@@ -16,8 +16,11 @@
   },
   "license": "MIT",
   "dependencies": {
-    "compot": "0.0.2",
+    "compot": "0.0.3",
     "gulp-util": "^3.0.6",
     "through2": "^2.0.0"
+  },
+  "devDependencies": {
+    "compot": "0.0.3"
   }
 }
