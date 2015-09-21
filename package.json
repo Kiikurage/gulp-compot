@@ -1,0 +1,24 @@
+{
+  "name": "gulp-compot",
+  "version": "1.0.0",
+  "description": "gulp plugin of compot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "kikurage",
+    "email": "y.kikura@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "compot": "0.0.2",
+    "gulp-util": "^3.0.6",
+    "through2": "^2.0.0"
+  },
+  "devDependencies": {
+    "compot": "0.0.2",
+    "gulp-util": "^3.0.6",
+    "through2": "^2.0.0"
+  }
+}
