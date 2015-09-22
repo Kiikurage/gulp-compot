@@ -1,6 +1,6 @@
 {
   "name": "gulp-compot",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "The gulp plugin of compot",
   "main": "index.js",
   "scripts": {
