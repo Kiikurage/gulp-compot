@@ -1,5 +1,6 @@
 var compot = require('compot'),
     gutil = require('gulp-util'),
+    path  =require('path'),
     through2 = require('through2');
 
 module.exports = function(option) {
@@ -16,7 +17,7 @@ module.exports = function(option) {
         }
 
         compot.render(file.contents.toString(encoding), {
-            root: file.base
+            root: path.dirname(file.path)
         }, function(err, res){
             if (err) {
                 return callback(err, null)
