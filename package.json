@@ -1,6 +1,6 @@
 {
   "name": "gulp-compot",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "The gulp plugin of compot",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "compot": "0.0.8",
+    "compot": "0.0.9",
     "gulp-util": "^3.0.6",
     "through2": "^2.0.0"
   }
